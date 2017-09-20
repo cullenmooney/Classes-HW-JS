@@ -10,7 +10,7 @@ class Pet {
 	setOwner(nameIt) {
 		this.owner = nameIt;
 	}
-}
+};
 const bobby = new Pet('bobby')
 bobby;
 
@@ -29,11 +29,32 @@ class Dog extends Pet {
 	getPrice (price) {
 		return this.price;
 	}
-}
+};
 
 // #3.)
 const sparky = new Dog('sparky', 500)
 sparky.getPrice();
+
+// #4.)
+class Cat extends Pet {
+	constructor(name, price) {
+		super(name)
+		this.price = price;
+	}
+	purr () {
+		console.log('purrr');
+	}
+	clean () {
+		console.log('cleaning');
+	}
+	getPrice (price) {
+		return this.price;
+	}
+};
+
+// #5.)
+const sprinkles = new Cat('sprinkles', 300);
+sprinkles.getPrice();
 
 
 
